@@ -42,14 +42,8 @@ h3 {
   font-size: 25px;
   color: white;
 }
-#about {
-  background-color: #015078;
-  min-height: 100vh;
-}
-#row1,
-#row2 {
-  display: flex;
-  justify-content: center;
+img#img {
+  height: 185px;
 }
 
 #cardbody {
@@ -58,6 +52,7 @@ h3 {
   align-items: center;
   width: 55vw;
   margin-left: 320px;
+  margin-bottom: 20px;
 }
 #heading1 {
   display: flex;
@@ -71,11 +66,19 @@ h3 {
   height: 400px;
   width: 350px;
 }
+#title {
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
 .column {
   float: left;
   width: 25%;
   padding: 0 10px;
 }
+/* #cards {
+  display: flex;
+  justify-content: center;
+} */
 .row {
   margin: 0 -5px;
 }

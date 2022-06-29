@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script
+      src="https://kit.fontawesome.com/bccdf4f91d.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
@@ -36,6 +40,7 @@
           <h3>
             Houzez is an innovative real estate WordPress theme that helps to
             ensure your website's success in this super-competitive market.
+            Company that rents family houses and loft apartments of your liking.
           </h3>
         </div>
       </div>
@@ -44,82 +49,60 @@
     <!-- card -->
     <div id="cardbody" class="card">
       <div class="card-body justify-content-center">
-        <div class="container">
+        <div class="options">
           <div class="row">
             <div class="col-6 col-sm-3">
               <h6 id="heading-6 fs-6">LOOKING FOR</h6>
-              <span class="border border-2 rounded-2 mb-3">-Apartment</span>
+              <select onchange="categoryFilter(event)">
+                <option value="all" selected>All</option>
+                <option value="Loft Apartment">Loft Apartment</option>
+                <option value="houses">Houses</option>
+                <option value="living room">living room</option>
+              </select>
             </div>
             <div class="col-6 col-sm-3">
               <h6 id="heading-6 fs-6">LOCATION</h6>
-              <span class="border border-2 rounded-2 mb-3">Cape Town</span>
+              <select onchange="nameSort(event)">
+                <option value="location">Chicago</option>
+                <option value="location">Miami</option>
+                <option value="location">cape town</option>
+                <option value="location">Brooklyn</option>
+              </select>
+            </div>
+            <div class="col-6 col-sm-3 mb-3">
+              <h6 id="heading-6 fs-6">YOUR BUDGET</h6>
+              <select onchange="priceFilter(event)">
+                <option value="R50000 pm">R50000 pm</option>
+                <option value="R750000 pm">R750000 pm</option>
+                <option value="25000 pm">25000 pm</option>
+                <option value="R670000 pm">R670000 pm</option>
+                <option value="R52000 pm">R52000 pm</option>
+                <option value="R63000 pm">R63000 pm</option>
+                <option value="R870000 pm">R870000 pm</option>
+                <option value="R670000 pm">R670000 pm</option>
+              </select>
             </div>
             <div class="col-6 col-sm-3">
               <h6 id="heading-6 fs-6">PROPERTY SIZE</h6>
-              <span class="border border-2 rounded-2 mb-3">3</span>
+              <select onchange="priceFilter(event)">
+                <option value="squareroot">6738 sq ft</option>
+                <option value="squareroot">11743 sq ft</option>
+                <option value="squareroot">5637 sq ft</option>
+                <option value="squareroot">10345 sq ft</option>
+                <option value="squareroot">1230 sq ft</option>
+                <option value="squareroot">9244 sq ft</option>
+                <option value="squareroot">2650 sq ft</option>
+                <option value="squareroot">6790 sq ft</option>
+              </select>
             </div>
-            <div class="col-6 col-sm-3">
-              <h6 id="heading-6 fs-6">YOUR BUDGET</h6>
-              <span class="border border-2 rounded-2 mb-3">R550 000</span>
-            </div>
-
-            <div class="w-100"></div>
-
-            <div class="col-6 col-sm-3 justify-content-center">
-              <button type="button" class="btn btn-outline-primary">
-                SEARCH
-              </button>
-            </div>
+          </div>
+          <div class="row">
+            <button onsub class="btn">SEARCH</button>
           </div>
         </div>
       </div>
     </div>
-    <!-- end card -->
-    <!-- about -->
-    <section id="about">
-      <h1 id="heading1">Discover our listing properties</h1>
-      <p id="prg">
-        If you're looking for the perfect place to stay, take a look at these
-        cosy, modern households
-      </p>
-      <!-- first row of cards -->
-      <div id="row1" class="row">
-        <div class="column">
-          <div class="card mb-3">
-            <img src="./images/pexels11.jpg" alt="new renovated living room" />
-            <h1 id="head-1">Renovated living room</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="card">
-            <img src="./images/pexels2.jpg" alt="modern 2 story home" />
-            <h1 id="head-1">Modern 2 story house</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
-          </div>
-        </div>
-      </div>
-      <div id="row2" class="row">
-        <div class="column">
-          <div class="card">
-            <img src="./images/pexels5.jpg" alt="upgraded kitchen" />
-            <h1 id="head-1">Newly upgraded kitchen</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="card">
-            <img src="./images/pexels8.jpg" alt="modern living area" />
-            <h1 id="head-1">Modern living area</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- end about -->
-    <!-- form -->
-    <section id="form"></section>
-    <!-- end form -->
+
     <!-- properties -->
     <section>
       <h1 id="heading1">Check Our Selection Of Finest Properties</h1>
@@ -127,42 +110,9 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, commodi
         recusandae!
       </p>
-      <div id="properties" class="properties"></div>
-      <!-- <h1 id="heading1">Check Our Selection Of Finest Properties</h1>
-      <p id="prg">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, commodi
-        recusandae!
-      </p> -->
-      <!--<div class="row">
-        <div class="column">
-          <div class="card">
-            <img src="./images/bedroom1.jpg" alt="bedroom with working area" />
-            <h1 id="head-1">Bedroom with a work space</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="card">
-            <img src="./images/bedroom2.jpg" alt="Bedroom with king size bed" />
-            <h1 id="head-1">Bedroom with king size bed</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="card">
-            <img src="./images/bedroom3.jpg" alt="bedroom with double bed" />
-            <h1 id="head-1">Bedroom with double bed</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="card">
-            <img src="./images/bedroom4.jpg" alt="wooden styled bed" />
-            <h1 id="head-1">Bedroom with wooden bed</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
-          </div>
-        </div>
-      </div> -->
+      <div class="row">
+        <div id="properties" class="properties"></div>
+      </div>
     </section>
     <!-- end properties -->
     <!-- footer -->
@@ -220,10 +170,10 @@
               </div>
             </div>
             <ul class="list-unstyled collapse" id="Product">
-              <li><a href="#">Create Websites</a></li>
-              <li><a href="#">Secure Cloud Hosting</a></li>
-              <li><a href="#">Engage Your Audience</a></li>
-              <li><a href="#">Website Support</a></li>
+              <li><a href="#properties">Houses</a></li>
+              <li><a href="#properties">Loft Apartments</a></li>
+              <li><a href="#properties">Living rooms</a></li>
+              <li><a href="#properties">Website Support</a></li>
             </ul>
           </div>
           <!--/.First column-->
@@ -254,33 +204,9 @@
           </div>
           <!--/.Second column-->
           <hr class="clearfix w-100 d-md-none mb-0" />
-          <!--Third column-->
-          <div class="col-md-3 mx-auto shfooter">
-            <h5 class="my-2 font-weight-bold d-none d-md-block">Resources</h5>
-            <div
-              class="d-md-none title"
-              data-target="#Resources"
-              data-toggle="collapse"
-            >
-              <div class="mt-3 font-weight-bold">
-                Resources
-                <div class="float-right navbar-toggler">
-                  <i class="fas fa-angle-down"></i>
-                  <i class="fas fa-angle-up"></i>
-                </div>
-              </div>
-            </div>
-            <ul class="list-unstyled collapse" id="Resources">
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">eBooks</a></li>
-              <li><a href="#">Whitepapers</a></li>
-              <li><a href="#">Comparison Guide</a></li>
-              <li><a href="#">Website Grader</a></li>
-            </ul>
-          </div>
-          <!--/.Third column-->
+
           <hr class="clearfix w-100 d-md-none mb-0" />
-          <!--Fourth column-->
+          <!--Third column-->
           <div class="col-md-3 mx-auto shfooter">
             <h5 class="my-2 font-weight-bold d-none d-md-block">Get Help</h5>
             <div
@@ -301,10 +227,9 @@
               <li><a href="#">Contact Us</a></li>
               <li><a href="#">Privacy Policy</a></li>
               <li><a href="#">Terms</a></li>
-              <li><a href="#">Login</a></li>
             </ul>
           </div>
-          <!--/.Fourth column-->
+          <!--/.Third column-->
         </div>
       </div>
       <!--/.Footer Links-->
@@ -315,7 +240,7 @@
         <script>
           document.write(new Date().getFullYear());
         </script>
-        <a href="#">W3SCHOOL WEB</a> | It is free for use
+        <a href="#properties">Houzez</a> | Properties to rent
       </div>
       <!--/.Copyright-->
     </footer>
