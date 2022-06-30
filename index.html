@@ -53,25 +53,27 @@
           <div class="row">
             <div class="col-6 col-sm-3">
               <h6 id="heading-6 fs-6">LOOKING FOR</h6>
-              <select onchange="categoryFilter(event)">
+              <select onchange="categoryFilter(event);">
                 <option value="all" selected>All</option>
                 <option value="Loft Apartment">Loft Apartment</option>
-                <option value="houses">Houses</option>
-                <option value="living room">living room</option>
+                <option value="House">House</option>
+                <option value="Living room">Living room</option>
               </select>
             </div>
             <div class="col-6 col-sm-3">
               <h6 id="heading-6 fs-6">LOCATION</h6>
-              <select onchange="nameSort(event)">
-                <option value="location">Chicago</option>
-                <option value="location">Miami</option>
-                <option value="location">cape town</option>
-                <option value="location">Brooklyn</option>
+              <select onchange="filterLocation(event);">
+                <option value="all" selected>All</option>
+                <option value="Chicago">Chicago</option>
+                <option value="Miami">Miami</option>
+                <option value="Cape Town">Cape Town</option>
+                <option value="Brooklyn">Brooklyn</option>
               </select>
             </div>
             <div class="col-6 col-sm-3 mb-3">
               <h6 id="heading-6 fs-6">YOUR BUDGET</h6>
               <select onchange="priceFilter(event)">
+                <option value="all" selected>All</option>
                 <option value="R50000 pm">R50000 pm</option>
                 <option value="R750000 pm">R750000 pm</option>
                 <option value="25000 pm">25000 pm</option>
@@ -85,6 +87,7 @@
             <div class="col-6 col-sm-3">
               <h6 id="heading-6 fs-6">PROPERTY SIZE</h6>
               <select onchange="priceFilter(event)">
+                <option value="all" selected>All</option>
                 <option value="squareroot">6738 sq ft</option>
                 <option value="squareroot">11743 sq ft</option>
                 <option value="squareroot">5637 sq ft</option>
