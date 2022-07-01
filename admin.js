@@ -181,7 +181,8 @@ function showItems(properties) {
           
           <td>
             <button class="btn" onclick="delItem(${property.ID})"><i class="fa-solid fa-delete-left" ></i></button>
-            <button class="btn" onclick="editItem(${property.ID})"><i class="fa-solid fa-pen-to-square"></i></button>
+            <button class="btn" onclick="updateProperty(${property.ID})"><i class="fa-solid fa-pen-to-square"></i>
+            </button>
             <button class="btn" onclick="updateItem(${property.ID})"><i class="fa-solid fa-floppy-disk"></i></button>
             </td>
            
@@ -222,7 +223,31 @@ function delItem(id) {
   showItems(properties);
 }
 // edit
-
+function updateProperty(id) {
+  console.log("Being clicked");
+  // variables for edited values
+  let etitle = document.getElementById(`title${id}`).value;
+  let etype = document.getElementById(`type${id}`).value;
+  let eaddress = document.getElementById(`address${id}`).value;
+  let eprice = document.getElementById(`price${id}`).value;
+  let eimgURL = document.getElementById(`imgURL${id}`).value;
+  let erooms = document.getElementById(`rooms${id}`).value;
+  let ebathrooms = document.getElementById(`bathrooms${id}`).value;
+  let egarage = document.getElementById(`garage${id}`).value;
+  let esquarefoot = document.getElementById(`squarefoot${id}`).value;
+  let property = properties.find((property) => property.id == id);
+  // passing edited values into array
+  property.title = etitle;
+  property.type = etype;
+  property.address = eaddress;
+  property.price = eprice;
+  property.imgURL = eimgURL;
+  property.rooms = parseInt(erooms);
+  property.bathrooms = parseInt(ebathrooms);
+  property.squarefoot = parseInt(esquarefoot);
+  localStorage.setItem("property", JSON.stringify(properties));
+  loadData();
+}
 // filter location
 function filterLocation(e) {
   const location = e.target.value;
