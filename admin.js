@@ -222,3 +222,43 @@ function delItem(id) {
   showItems(properties);
 }
 // edit
+
+// filter location
+function filterLocation(e) {
+  const location = e.target.value;
+  if (location == "all") {
+    return showItems(properties);
+  }
+  const filtered = properties.filter(
+    (property) => property.address == location
+  );
+
+  return showItems(filtered);
+}
+// filter category
+function categoryFilter(e) {
+  const category = e.target.value;
+  if (category == "all") {
+    return showItems(properties);
+  }
+  const filtered = properties.filter((property) => property.type == category);
+  return showItems(filtered);
+}
+// filter price
+function priceFilter(e) {
+  const price = e.target.value;
+  if (price == "all") {
+    return showItems(properties);
+  }
+  const filtered = properties.filter((property) => property.price == price);
+  return showItems(filtered);
+}
+// filter
+function sizeFilter(e) {
+  const size = e.target.value;
+  if (size == "all") {
+    return showItems(properties);
+  }
+  const filtered = properties.filter((property) => property.squarefoot == size);
+  return showItems(filtered);
+}

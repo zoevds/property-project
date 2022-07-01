@@ -11,6 +11,24 @@
 body {
   background-color: lightgrey;
 }
+#btn-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#cardbody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55vw;
+  /* margin-left: 320px; */
+  margin-bottom: 20px;
+  /* background-color: black; */
+}
+h1 {
+  display: flex;
+  justify-content: center;
+}
 @media screen and (max-width: 370px) {
   tr {
     display: flex;
@@ -27,5 +45,10 @@ body {
   tr {
     display: flex;
     flex-direction: column;
+  }
+}
+@media screen and (max-width: 343px) {
+  #cardbody {
+    width: 100%;
   }
 }

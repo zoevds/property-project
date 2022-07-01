@@ -186,8 +186,6 @@ a {
 @media screen and (max-width: 450px) {
   .column {
     width: 100%;
-    /* display: block;
-    margin-bottom: 20px; */
   }
 }
 @media screen and (max-width: 343px) {
@@ -205,9 +203,13 @@ a {
     width: 90%;
   }
 }
-@media screen and (max-width: 1138px) {
+@media screen and (max-width: 1250.6px) and (min-width: 600px) {
   .column {
+    width: 50%;
+  }
+  div#properties {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
   }
 }

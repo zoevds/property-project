@@ -19,17 +19,87 @@
     <title>admin</title>
   </head>
   <body>
-    <h1>Table</h1>
+    <h1>Add a property</h1>
 
     <!-- Button trigger modal -->
-    <button
-      type="button"
-      class="btn btn-dark mb-2"
-      data-bs-toggle="modal"
-      data-bs-target="#exampleModal"
-    >
-      Add Property
-    </button>
+    <div class="container d-flex justify-content-center ">
+        <button
+        id="btn-btn"
+          type="button"
+          class="btn btn-dark mb-2"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Add Property
+        </button>   
+    </div>
+      <div id="cardbody" class="card bg-dark  container-fluid">
+      <div class="card-body bg-dark text-light justify-content-center">
+        <div class="options">
+          <div class="row">
+            <div class="col-6 col-sm-3 container-fluid">
+              <h6 id="heading-6 fs-6">LOOKING FOR</h6>
+              <select
+                class="container-fluid form-select"
+                onchange="categoryFilter(event);"
+              >
+                <option value="all" selected>All</option>
+                <option value="Loft Apartment">Loft Apartment</option>
+                <option value="House">House</option>
+                <option value="Living room">Living room</option>
+              </select>
+            </div>
+            <div class="col-6 col-sm-3 container-fluid">
+              <h6 id="heading-6 fs-6">LOCATION</h6>
+              <select
+                class="container-fluid form-select"
+                onchange="filterLocation(event);"
+              >
+                <option value="all" selected>All</option>
+                <option value="Chicago">Chicago</option>
+                <option value="Miami">Miami</option>
+                <option value="Cape Town">Cape Town</option>
+                <option value="Brooklyn">Brooklyn</option>
+              </select>
+            </div>
+            <div class="col-6 col-sm-3 mb-3 container-fluid">
+              <h6 id="heading-6 fs-6">BUDGET</h6>
+              <select
+                class="container-fluid form-select"
+                onchange="priceFilter(event)"
+              >
+                <option value="all" selected>All</option>
+                <option value="R50000 pm">R50000 pm</option>
+                <option value="R750000 pm">R750000 pm</option>
+                <option value="25000 pm">25000 pm</option>
+                <option value="R670000 pm">R670000 pm</option>
+                <option value="R52000 pm">R52000 pm</option>
+                <option value="R63000 pm">R63000 pm</option>
+                <option value="R870000 pm">R870000 pm</option>
+                <option value="R670000 pm">R670000 pm</option>
+              </select>
+            </div>
+            <div class="col-6 col-sm-3 container-fluid">
+              <h6 id="heading-6 fs-6">SIZE</h6>
+              <select
+                class="container-fluid form-select"
+                onchange="sizeFilter(event)"
+              >
+                <option value="all" selected>All</option>
+                <option value="6738 sq ft">6738 sq ft</option>
+                <option value="11743 sq ft">11743 sq ft</option>
+                <option value="5637 sq ft">5637 sq ft</option>
+                <option value="10345 sq ft">10345 sq ft</option>
+                <option value="1230 sq ft">1230 sq ft</option>
+                <option value="9244 sq ft">9244 sq ft</option>
+                <option value="2650 sq ft">2650 sq ft</option>
+                <option value="6790 sq ft">6790 sq ft</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Modal -->
     <div
@@ -83,14 +153,14 @@
               aria-label="Default select example"
             >
               <option selected>Area</option>
-              <option value="Chicago"> Chicago IL 60620, USA</option>
-              <option value="Miami">Miami , FL 33135, USA</option>
-              <option value="cape town"> cape town , constancia</option>
-              <option value="cape town">cape town, sea point</option>
-              <option value="cape town">Miami, FL 33137, USA</option>
+              <option value="Chicago"> Chicago </option>
+              <option value="Miami">Miami</option>
+              <option value="cape town"> cape town </option>
+              <option value="cape town">cape town</option>
+              <option value="cape town">Miami</option>
              
-              <option value=" Brooklyn">  Brooklyn, NY, USA</option>
-              <option value="Jersey City"> Jersey City, NJ 07302, USA</option>
+              <option value=" Brooklyn">  Brooklyn</option>
+              <option value="Jersey City"> Jersey City</option>
              
             </select>
             <!-- input 4 -->
