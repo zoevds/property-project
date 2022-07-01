@@ -44,7 +44,7 @@ let properties = JSON.parse(localStorage.getItem("properties"))
         title: "vintage house with garden",
         type: "house",
         address: "Cape Town",
-        price: "R670000 pm",
+        price: "R25000 pm",
         imgURL: "https://i.postimg.cc/DyX3sgxS/pexels-pixabay-259588.jpg",
         rooms: "6",
         bathrooms: "3",
@@ -142,7 +142,7 @@ let properties = JSON.parse(localStorage.getItem("properties"))
         title: "Apartment",
         type: "Loft Apartment",
         address: " Brooklyn",
-        price: "R670000 pm",
+        price: "R870000 pm",
         imgURL: "https://i.postimg.cc/150cm0Wh/pexels-mike-b-144632.jpg",
         rooms: "5",
         bathrooms: "4",
@@ -165,7 +165,7 @@ function showItems(properties) {
     <p>${property.price}</p>
 
    
-    <div class="container">
+    <div class="container-fluid">
   <div class="row align-items-start">
     <div class="col-3">
      <p id="rooms"><i class="fa-solid fa-bed me-1"></i>${property.rooms}</p>
@@ -194,7 +194,7 @@ console.log(properties);
 // function displayAll() {
 //   showItems(properties);
 // }
-
+// filter location
 function filterLocation(e) {
   const location = e.target.value;
   if (location == "all") {
@@ -206,12 +206,30 @@ function filterLocation(e) {
 
   return showItems(filtered);
 }
-
+// filter category
 function categoryFilter(e) {
   const category = e.target.value;
   if (category == "all") {
     return showItems(properties);
   }
   const filtered = properties.filter((property) => property.type == category);
+  return showItems(filtered);
+}
+// filter price
+function priceFilter(e) {
+  const price = e.target.value;
+  if (price == "all") {
+    return showItems(properties);
+  }
+  const filtered = properties.filter((property) => property.price == price);
+  return showItems(filtered);
+}
+// filter
+function sizeFilter(e) {
+  const size = e.target.value;
+  if (size == "all") {
+    return showItems(properties);
+  }
+  const filtered = properties.filter((property) => property.squarefoot == size);
   return showItems(filtered);
 }

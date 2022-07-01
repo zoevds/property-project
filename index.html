@@ -47,22 +47,22 @@
     </section>
     <!-- end landing -->
     <!-- card -->
-    <div id="cardbody" class="card">
+    <div id="cardbody" class="card container-fluid">
       <div class="card-body justify-content-center">
         <div class="options">
           <div class="row">
-            <div class="col-6 col-sm-3">
+            <div class="col-6 col-sm-3 container-fluid">
               <h6 id="heading-6 fs-6">LOOKING FOR</h6>
-              <select onchange="categoryFilter(event);">
+              <select class="container-fluid" onchange="categoryFilter(event);">
                 <option value="all" selected>All</option>
                 <option value="Loft Apartment">Loft Apartment</option>
                 <option value="House">House</option>
                 <option value="Living room">Living room</option>
               </select>
             </div>
-            <div class="col-6 col-sm-3">
+            <div class="col-6 col-sm-3 container-fluid">
               <h6 id="heading-6 fs-6">LOCATION</h6>
-              <select onchange="filterLocation(event);">
+              <select class="container-fluid" onchange="filterLocation(event);">
                 <option value="all" selected>All</option>
                 <option value="Chicago">Chicago</option>
                 <option value="Miami">Miami</option>
@@ -70,9 +70,9 @@
                 <option value="Brooklyn">Brooklyn</option>
               </select>
             </div>
-            <div class="col-6 col-sm-3 mb-3">
+            <div class="col-6 col-sm-3 mb-3 container-fluid">
               <h6 id="heading-6 fs-6">YOUR BUDGET</h6>
-              <select onchange="priceFilter(event)">
+              <select class="container-fluid" onchange="priceFilter(event)">
                 <option value="all" selected>All</option>
                 <option value="R50000 pm">R50000 pm</option>
                 <option value="R750000 pm">R750000 pm</option>
@@ -84,23 +84,20 @@
                 <option value="R670000 pm">R670000 pm</option>
               </select>
             </div>
-            <div class="col-6 col-sm-3">
-              <h6 id="heading-6 fs-6">PROPERTY SIZE</h6>
-              <select onchange="priceFilter(event)">
+            <div class="col-6 col-sm-3 container-fluid">
+              <h6 id="heading-6 fs-6">SIZE</h6>
+              <select class="container-fluid" onchange="sizeFilter(event)">
                 <option value="all" selected>All</option>
-                <option value="squareroot">6738 sq ft</option>
-                <option value="squareroot">11743 sq ft</option>
-                <option value="squareroot">5637 sq ft</option>
-                <option value="squareroot">10345 sq ft</option>
-                <option value="squareroot">1230 sq ft</option>
-                <option value="squareroot">9244 sq ft</option>
-                <option value="squareroot">2650 sq ft</option>
-                <option value="squareroot">6790 sq ft</option>
+                <option value="6738 sq ft">6738 sq ft</option>
+                <option value="11743 sq ft">11743 sq ft</option>
+                <option value="5637 sq ft">5637 sq ft</option>
+                <option value="10345 sq ft">10345 sq ft</option>
+                <option value="1230 sq ft">1230 sq ft</option>
+                <option value="9244 sq ft">9244 sq ft</option>
+                <option value="2650 sq ft">2650 sq ft</option>
+                <option value="6790 sq ft">6790 sq ft</option>
               </select>
             </div>
-          </div>
-          <div class="row">
-            <button onsub class="btn">SEARCH</button>
           </div>
         </div>
       </div>
@@ -108,8 +105,10 @@
 
     <!-- properties -->
     <section>
-      <h1 id="heading1">Check Our Selection Of Finest Properties</h1>
-      <p id="prg">
+      <h1 class="ms-4" id="heading1">
+        Check Our Selection Of Finest Properties
+      </h1>
+      <p class="ms-4" id="prg">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, commodi
         recusandae!
       </p>

@@ -51,7 +51,7 @@ img#img {
   justify-content: center;
   align-items: center;
   width: 55vw;
-  margin-left: 320px;
+  /* margin-left: 320px; */
   margin-bottom: 20px;
 }
 #heading1 {
@@ -177,30 +177,35 @@ a {
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
-    display: block;
-    margin-bottom: 20px;
+    /* display: block;
+    margin-bottom: 20px; */
   }
 }
-/*
-@media (max-width: 790px) {
-  .toggle {
-    display: flex;
+@media screen and (max-width: 450px) {
+  .column {
+    width: 100%;
+    /* display: block;
+    margin-bottom: 20px; */
   }
-
-  ul {
+}
+@media screen and (max-width: 343px) {
+  #cardbody {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 550px) {
+  #cardbody {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 700px) {
+  #cardbody {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1138px) {
+  .column {
+    display: flex;
     flex-direction: column;
-    display: none;
-    position: relative;
-    top: -100vh;
-    transition: all 0.7s ease-in;
   }
-
-  .menu {
-    cursor: pointer;
-  }
-
-  .active {
-    display: flex;
-    top: 10vh;
-  }
-} */ ;
+}
