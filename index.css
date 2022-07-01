@@ -53,6 +53,7 @@ img#img {
   width: 55vw;
   /* margin-left: 320px; */
   margin-bottom: 20px;
+  background-color: lightgrey;
 }
 #heading1 {
   display: flex;
@@ -92,6 +93,7 @@ img#img {
   padding: 16px;
   text-align: center;
   background-color: #f1f1f1;
+  background-color: lightgrey;
 }
 #head-1 {
   font-size: 20px;
